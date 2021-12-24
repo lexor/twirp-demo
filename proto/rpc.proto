@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// package twirp.package_name;
+
+option go_package = "internal/rpc";
+
+service Foo {
+  rpc Ping(PingReq) returns (PongRes);
+}
+
+message PingReq {
+  string foo = 1;
+}
+
+message PongRes {
+  string bar = 1;
+}
